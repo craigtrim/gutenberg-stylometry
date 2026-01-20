@@ -8,7 +8,6 @@ This module handles:
 4. Clean text output - pure authorial prose
 """
 
-import os
 import re
 from pathlib import Path
 from collections import defaultdict
@@ -145,7 +144,6 @@ def is_toc_entry(line: str, next_lines: list[str] = None) -> bool:
             # Look ahead to find what kind of content follows
             # Skip blanks and short lines (like [Illustration]) to find the next substantial content
             chapter_count = 0
-            prose_found = False
 
             for next_line in next_lines:
                 next_stripped = next_line.strip()
@@ -165,7 +163,6 @@ def is_toc_entry(line: str, next_lines: list[str] = None) -> bool:
 
                 # Found substantial content
                 if len(next_stripped) > 60:
-                    prose_found = True
                     break
 
             # If we found multiple chapters before prose, this is a TOC entry
