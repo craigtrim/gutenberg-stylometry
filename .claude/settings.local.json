@@ -112,7 +112,9 @@
       "Bash(python download-from-catalog.py:*)",
       "Bash(wc:*)",
       "Bash(npm run dev:*)",
-      "Bash(python -m gutenburg_stylometry.normalize:*)"
+      "Bash(python -m gutenburg_stylometry.normalize:*)",
+      "Bash(make all:*)",
+      "Bash(poetry run ruff:*)"
     ]
   }
 }
