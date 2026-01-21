@@ -7,11 +7,13 @@
 
 **Can you tell Dickens from Doyle by the numbers alone?**
 
-This toolkit quantifies writing style—transforming prose into measurable fingerprints. Feed it any author from the 60,000+ book Gutenberg corpus and discover what makes their voice unique.
+This toolkit quantifies writing style. It transforms prose into measurable fingerprints. Feed it any author from the 60,000+ book Gutenberg corpus and discover what makes their voice unique.
 
 ## Why This Matters
 
-Every author has tells. Dickens loved semicolons. Austen's sentences run long and balanced. Hemingway's don't. These patterns aren't just stylistic quirks—they're statistically significant signatures that persist across an author's entire body of work.
+Every author has tells. Dickens loved semicolons. Austen's sentences run long and balanced. Hemingway's don't.
+
+These patterns aren't stylistic quirks. They're statistically significant signatures that persist across an author's entire body of work.
 
 Stylometry has been used to:
 - **Unmask anonymous authors** (who really wrote that political essay?)
@@ -30,12 +32,12 @@ poetry run python scripts/compute_ttr.py data/dickens_clean -o dickens_ttr.jsonl
 
 | Metric | What It Reveals |
 |--------|-----------------|
-| **Type-Token Ratio** | Vocabulary richness—how often an author repeats words |
-| **STTR** | Standardized TTR—controls for text length bias |
-| **Hapax Legomena** | Words used exactly once—a signature of lexical range |
-| **Sentence Length** | Rhythm and complexity—short punchy vs. flowing elaborate |
-| **Function Words** | The unconscious glue words (the, of, and) that betray authorship |
-| **Punctuation Profile** | Semicolon addiction? Em-dash enthusiast? The marks don't lie |
+| **Type-Token Ratio** | Vocabulary richness. How often an author repeats words. |
+| **STTR** | Standardized TTR. Controls for text length bias. |
+| **Hapax Legomena** | Words used exactly once. A signature of lexical range. |
+| **Sentence Length** | Rhythm and complexity. Short and punchy vs. long and elaborate. |
+| **Function Words** | The unconscious glue words (the, of, and) that betray authorship. |
+| **Punctuation Profile** | Semicolon addiction? Em-dash enthusiast? The marks don't lie. |
 
 ## Current Authors
 
@@ -48,10 +50,10 @@ poetry run python scripts/compute_ttr.py data/dickens_clean -o dickens_ttr.jsonl
 ## Sample Output
 
 ```
-Austen vs Eliot vs Dickens — STTR Comparison
+Austen vs Eliot vs Dickens: STTR Comparison
 
 Author      Mean STTR    Std Dev    Interpretation
-─────────────────────────────────────────────────────
+-----------------------------------------------------
 Eliot       0.4446       0.0148     Richest vocabulary
 Austen      0.4141       0.0077     Most consistent style
 Dickens     0.4089       0.0112     Broadest audience appeal
@@ -59,7 +61,7 @@ Dickens     0.4089       0.0112     Broadest audience appeal
 
 ## Corpus
 
-60,000+ public domain books from Project Gutenberg, normalized and deduplicated:
+60,000+ public domain books from Project Gutenberg. Normalized and deduplicated.
 
 ```
 s3://craigtrim-resources/gutenberg/txt/
